@@ -1,10 +1,3 @@
-Here is a professional and detailed `README.md` file for your project. You can save this file in the root folder of your extension.
-
-It covers installation, the features we built, and the folder structure.
-
------
-
-````markdown
 # Case Tracker Chrome Extension
 
 ![Version](https://img.shields.io/badge/version-1.0-blue) ![Manifest](https://img.shields.io/badge/manifest-v3-green)
