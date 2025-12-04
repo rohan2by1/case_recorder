@@ -121,11 +121,8 @@ When exporting data via the Settings page, the CSVs are formatted as follows:
 
 **Sk Md Rohan**
 [LinkedIn Profile](https://www.linkedin.com/in/rohan2by1)
-[LinkedIn Profile](https://www.github.com/rohan2by1)
+[Github](https://www.github.com/rohan2by1)
 
 -----
 
 **License:** Personal Use / Internal Tool.
-
-```
-```
