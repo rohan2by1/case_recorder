@@ -119,8 +119,9 @@ When exporting data via the Settings page, the CSVs are formatted as follows:
 
 ## 👤 Author
 
-**Your Name**
-[LinkedIn Profile](https://www.linkedin.com/in/yourprofile)
+**Sk Md Rohan**
+[LinkedIn Profile](https://www.linkedin.com/in/rohan2by1)
+[LinkedIn Profile](https://www.github.com/rohan2by1)
 
 -----
 
