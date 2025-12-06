@@ -1,0 +1,313 @@
+/* Import modern font 'Inter' */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  /* Modern Dark Palette */
+  --bg-color: #313131;     /* User defined background */
+  
+  /* Frosted Glass Surface for Cards */
+  --bg-surface: rgba(40, 40, 40, 0.7); 
+  --backdrop-blur: 10px;
+  
+  --bg-hover: rgba(255, 255, 255, 0.1);
+  --primary: #3b82f6;      /* Vibrant Blue */
+  --primary-hover: #2563eb;
+  --text-main: #f8fafc;    /* White-ish */
+  --text-muted: #a3a3a3;   /* Neutral grey text */
+  --border: rgba(255, 255, 255, 0.1); /* Subtle white border */
+  --radius: 8px; 
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  margin: 0;
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.4;
+  font-size: 13px;
+  min-height: 100vh; /* Ensures pattern covers full height */
+
+  /* --- YOUR NEW BACKGROUND PATTERN --- */
+  background-color: var(--bg-color);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.171) 2px, transparent 0);
+  background-size: 30px 30px;
+  background-position: -5px -5px;
+}
+
+.container {
+  max-width: auto;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+/* --- Header & Nav --- */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: rgba(35, 35, 35, 0.85); /* Darker header */
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+h1 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+nav {
+  display: flex;
+  gap: 4px;
+}
+
+nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 50px;
+  transition: all 0.2s ease;
+}
+
+nav a:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+nav a.active {
+  color: #fff;
+  background: var(--primary);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+}
+
+/* --- Tables --- */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 16px;
+  
+  /* Glassmorphism for Table */
+  background: var(--bg-surface);
+  backdrop-filter: blur(var(--backdrop-blur));
+  
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  font-size: 13px;
+}
+
+th, td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  background: rgba(20, 20, 20, 0.5); /* Darker header row */
+  color: var(--text-muted);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover td {
+  background: var(--bg-hover);
+}
+
+/* --- Buttons --- */
+button {
+  background: #fbca1f;
+  font-family: inherit;
+  padding: 0.6em 1em;
+  font-weight: 900;
+  font-size: 12px;
+  border: 3px solid black;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}
+
+button:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
+}
+
+
+button.secondary {
+  background: #f63838;
+  font-family: inherit;
+  padding: 0.6em 1em;
+  font-weight: 900;
+  font-size: 12px;
+  border: 3px solid black;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
+  cursor: pointer;
+}
+
+button.secondary:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}
+
+/* Action Buttons Spacing */
+td.actions {
+  white-space: nowrap;
+}
+td.actions button {
+  margin-right: 8px;
+}
+td.actions button:last-child {
+  margin-right: 0;
+}
+
+/* --- Toolbar & Inputs --- */
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+
+input, select {
+  background: rgba(0, 0, 0, 0.2); /* Darker input bg */
+  color: #fff;
+  border: 1px solid var(--border);
+  padding: 7px 12px;
+  border-radius: var(--radius);
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input:focus, select:focus {
+  border-color: var(--primary);
+  background: rgba(0, 0, 0, 0.837);
+}
+
+.muted {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+/* --- Stats Cards (Glass Effect) --- */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  /* Glass Card */
+  background: var(--bg-surface);
+  backdrop-filter: blur(var(--backdrop-blur));
+  
+  padding: 20px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-label {
+  color: var(--text-muted);
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.stat-value {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+/* --- Charts --- */
+#charts h2, h2 {
+  font-size: 15px;
+  color: #fff;
+  margin: 24px 0 12px;
+  font-weight: 600;
+}
+
+/* Vertical Stack Layout */
+.charts-stack {
+  display: flex;
+  flex-direction: column; /* This stacks them vertically */
+  gap: 24px;              /* Space between the two charts */
+}
+
+/* Ensure cards maintain height when stacked */
+.chart-card {
+  /* Keep previous styles... */
+  display: flex;
+  flex-direction: column;
+  height: 350px; /* Slightly taller helps when they are full width */
+  width: 100%;   /* Ensure they take full width */
+}
+
+/* Update this section in main.css */
+
+.chart-card {
+  flex: 1;
+  background: var(--bg-surface);
+  backdrop-filter: blur(var(--backdrop-blur));
+  
+  padding: 16px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  
+  /* Flex Column Layout to stack H2 and Canvas */
+  display: flex;
+  flex-direction: column;
+  height: 300px; /* Fixed height for uniformity */
+}
+
+.chart-card h2 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: var(--text-muted);
+    flex-shrink: 0; /* Prevent header from shrinking */
+}
+
+/* New Wrapper to ensure Chart fills remaining space */
+.chart-wrapper {
+  flex-grow: 1;        /* Fill remaining height */
+  position: relative;  /* Required for Chart.js responsiveness */
+  width: 100%;
+  min-height: 0;       /* Crucial for Flexbox containers */
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-color); }
+::-webkit-scrollbar-thumb { background: #555; border-radius: 4px; border: 2px solid var(--bg-color); }
+::-webkit-scrollbar-thumb:hover { background: #777; }
+

@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Queued</title>
+  <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+  <header>
+    <h1>Case Tracker</h1>
+    <nav>
+      <a class="active" href="queued.html">Queued</a>
+      <a href="history.html">History</a>
+      <a href="performance.html">Performance</a>
+      <a href="settings.html">Settings</a>
+    </nav>
+  </header>
+  <div class="container">
+    <div class="toolbar">
+      <span class="muted">New tab opens here by default</span>
+      <div style="flex-grow: 1;"></div>
+      <button id="refresh">Refresh Queue</button>
+    </div>
+    <table id="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Link</th>
+          <th>Opened</th>
+          <th>Case Type</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <datalist id="caseTypes"></datalist>
+  <script src="queued.js"></script>
+</body>
+</html>
